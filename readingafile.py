@@ -37,3 +37,13 @@ print(len(contents))
 fileref.close()
 
 print('-'*100)
+
+# Accumulation pattern 
+
+f = open("olympics.txt", 'r')
+txt = f.read() #now txt is one long string containing all the characters  
+t_count = 0 #initialize the accumulater variable
+for c in txt:
+    if c == 't': 
+        t_count = t_count +1 #increment the counter 
+print("t: " + str(t_count) + ' occurences')

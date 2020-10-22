@@ -96,11 +96,65 @@ def total(lst):
 y = total([1,5,7])
 print (y)
 
+
+print('='*15,'#10','='*15)
 #10 Functions calling other functions (compostion)
+def square(x):
+    y= x*x
+    return y
+
+def sum_of_square(x,y,z):
+    a = square(x)
+    b = square(y)
+    c = square(z)
+
+    return a+b+c
+
+a = -5
+b = 2
+c = 10
+
+result = sum_of_square(a,b,c)
+print (result)
+
+
+print('='*15,'#11','='*15)
+#11 Functions calling other functions (compostion)
+def most_common_letter(s):
+    frequencies = count_freqs(s)
+    return best_key(frequencies)
+
+def count_freqs(st):
+    d = {}
+    for c in st:
+        if c not in d:
+             d[c] = 0
+        d[c] = d[c] + 1
+    return d
+
+def best_key(dictionary):
+    ks = dictionary.keys()
+    best_key_so_far = list(ks)[0]  # Have to turn ks into a real list before using [] to select an item
+    for k in ks:
+        if dictionary[k] > dictionary[best_key_so_far]:
+            best_key_so_far = k
+    return best_key_so_far
+
+print(most_common_letter("abbbbbbbbbbbccccddddd"))
 
 
 
 
+print('='*15,'#12','='*15)
+#12 Mutable objects 
+
+def changeit(lst):
+    lst[0] = 'Michigan'
+    lst[1] = 'Wolverines'
+
+mylst = ['our', 'students', 'are', 'great']
+changeit(mylst)
+print(mylst)
 
 
 

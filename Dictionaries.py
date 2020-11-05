@@ -113,7 +113,8 @@ print(opposites['right'])
 
 #12 Accumulating in dictionary
 print('='*15,'#12','='*15)
-f = open ('olympics.txt', 'r')
+
+f = open('olympics.txt', 'r')
 txt = f.read() #now the txt is one long string containing all the characters 
 x = {} #starts with an empty dictionary
 x['t'] = 0 #initializer the t counter 

@@ -20,3 +20,9 @@ f(2,3)
 lf = lambda x: x-1 #The return functions is anonymous
 print (lf(3))
 
+#4 O Lambda, do exemplo anterior, faz essa mesma função de forma mais simples
+def lf(x):
+	y = x-1
+	return y
+print(lf(3))
+

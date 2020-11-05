@@ -52,7 +52,8 @@ def absolute(x):
     else:
         return -x
 
-L2 = sorted(L1, key=absolute )
+L2 = sorted(L1, key=absolute ) #A "key" está falando "Eu quero que você organize de acordo com ... (irá organizar de acordo com os comandos dados depois do igual)"
+
 print(L2)
 
 #or in reverse order
@@ -103,7 +104,7 @@ new_order = sorted(fruits, key = lambda fruit_name: (len(fruit_name), fruit_name
 for fruit in new_order:
     print (fruit)
 
-print('='*15,'#9','='*15)
+print('='*15,'#10','='*15)
 #When to use a Lambda Expression - A lambda expression is short and simple use, when things get complicated use a function
 
 states = {"Minnesota": ['St.Paul', 'Minneapolis', 'Saint Cloud', 'Stillwater'],

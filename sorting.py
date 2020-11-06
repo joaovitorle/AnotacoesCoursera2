@@ -81,11 +81,15 @@ L = ['E', 'F', 'B', 'A', 'D', 'I', 'I', 'C', 'B', 'A', 'D', 'D', 'E', 'D']
 d = {}
 for x in L:
     if x in d:
-        d[x] = d[x] +1
+        d[x] = d[x] +1 # "x" will be key and x will be insert in d and "d[x] is the value, so we gonna sum 1 to the x if this has already seen before
     else:
-        d[x] = 1
-for x in sorted(d.keys(), key=lambda k: d[k]):
-    print(f'{x} appears {d[x]} times')
+        d[x] = 1 #If x is not in d, so increment x as 1 
+for x in sorted(d.keys(), key=lambda k: d[k]): #The "x" is gonna make a comparation into the sorted 
+#(Organized by the highest value to lowest) choosing just the keys from d (ex: E, F, B etc)
+# So, we gonna call the "key" (We gonna sorting sth after the key), we call the 'function' Lambda 
+# The variable for lambda is k and we gonna organize by the d[k] who is the value from the keys, 
+# so the lowest key value will be organized to be the first. 
+    print(f'{x} appears {d[x]} times') 
 
 print('='*15,'#8','='*15)
 #Breaking Ties: Second Sorting

@@ -55,7 +55,7 @@ print (inventory['bananas'])
 #7 Dictionary Methods
 print('='*15,'#7','='*15) 
 inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
-for key in inventory.keys():
+for key in inventory.keys():  
     print(key,'has the value', inventory[key])
 
 for key in inventory:
